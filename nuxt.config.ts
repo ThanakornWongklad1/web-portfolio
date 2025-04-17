@@ -1,13 +1,7 @@
-import { modal } from "#build/ui";
-
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
-
   modules: ["@nuxt/ui", "@nuxt/eslint", "@nuxtjs/google-fonts", "nuxt-marquee"],
-
   css: ["~/assets/css/main.css"],
-
   googleFonts: {
     display: "swap",
     families: {
@@ -17,7 +11,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
   app: {
     head: {
       meta: [
@@ -30,9 +23,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-
   compatibilityDate: "2024-11-27",
-
   future: {
     compatibilityVersion: 4,
   },
