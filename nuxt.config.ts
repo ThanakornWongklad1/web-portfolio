@@ -2,16 +2,9 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ["@nuxt/ui", "@nuxt/eslint", "@nuxtjs/google-fonts", "nuxt-marquee"],
   css: ["~/assets/css/main.css"],
-  googleFonts: {
-    display: "swap",
-    families: {
-      Poppins: {
-        wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-        ital: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-      },
-    },
-  },
+  ssr: false,
   app: {
+    baseURL: "/web-portfolio/",
     head: {
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -21,6 +14,15 @@ export default defineNuxtConfig({
         },
         { name: "author", content: "Thanakorn Wongklad" },
       ],
+    },
+  },
+  googleFonts: {
+    display: "swap",
+    families: {
+      Poppins: {
+        wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        ital: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      },
     },
   },
   compatibilityDate: "2024-11-27",
