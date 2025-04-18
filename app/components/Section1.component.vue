@@ -3,6 +3,7 @@
     id="home"
     class="relative overflow-hidden h-svh w-full bg-linear-to-b from-new-blue-500/10 from-20% to-black px-7"
   >
+  <img src="../assets/image/lightSource.svg" alt="light source" class="absolute top-0 left-0 w-full mask-b-from-20% mask-b-to-80% opacity-30" />
     <div class="text-center flex justify-center">
       <div class="flex flex-col items-center pt-40 gap-7 h-full">
         <div class="flex flex-col">
@@ -59,7 +60,7 @@
     ></div>
 
     <NuxtMarquee
-      class="overflow-hidden  mt-28"
+      class="overflow-hidden mt-32 md:mt-44"
       :direction="'left'"
       :gradient="true"
       :gradientColor="'#000'"
