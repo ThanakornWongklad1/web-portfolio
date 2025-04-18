@@ -27,13 +27,13 @@
             <h1>my personal portfolio</h1>
           </div>
           <p
-            class="mt-4 text-lg text-white/40 font-light text-[14px] md:text-[18px] w-[250px] md:w-[500px] mx-auto"
+            class="mt-4 text-white/40 font-light text-sm md:text-lg w-[250px] md:w-[500px] mx-auto"
           >
             Hi, I'm Thanakorn Wongklad. I'm incredibly passionate about web
             applications & UI/UX design
           </p>
         </div>
-        <div class="flex flex-col gap-3 md:flex-row md:gap-6">
+        <div class="flex flex-col gap-3 md:flex-row md:gap-6 z-20">
           <button
             class="bg-white text-black p-2 w-[270px] md:w-[180px] rounded-xl hover:scale-105 transition"
           >

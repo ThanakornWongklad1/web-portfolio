@@ -10,7 +10,7 @@
   <div class="px-7 mt-0 md:mt-44">
     <!-- header -->
     <div class="w-full flex flex-col items-center">
-      <p class="text-[14px] md:text-[16px] text-gradient tracking-[0.3rem]">EXPERIENCES</p>
+      <p class="text-sm md:text-[16px] text-gradient tracking-[0.3rem]">EXPERIENCES</p>
       <h1 class="text-[30px] md:text-[40px] font-medium text-white">
         My Projects
       </h1>
