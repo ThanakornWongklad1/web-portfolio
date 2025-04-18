@@ -7,20 +7,54 @@
     id="projects"
     class="absolute translate-y-1/5 -z-10 -left-10/12 opacity-50 overflow-hidden h-[120rem] md:h-[80rem] w-full blur-[100px] md:blur-[300px] bg-linear-to-t from-[#C6FCA6] to-[#A7FCEE]/74 rounded-full px-7"
   ></div>
-  <div class="px-7 mt-0 md:mt-44">
+  <div class="px-7 mt-5 md:mt-44">
     <!-- header -->
     <div class="w-full flex flex-col items-center">
-      <p class="text-sm md:text-[16px] text-gradient tracking-[0.3rem]">EXPERIENCES</p>
-      <h1 class="text-[30px] md:text-[40px] font-medium text-white">
+      <p
+        v-motion
+        :initial="{ opacity: 0, y: -30 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :visible="{ opacity: 1, y: 0 }"
+        :delay="200"
+        :duration="300"
+        class="text-sm md:text-[16px] text-gradient tracking-[0.3rem]"
+      >
+        EXPERIENCES
+      </p>
+      <h1
+        v-motion
+        :initial="{ opacity: 0 }"
+        :enter="{ opacity: 1 }"
+        :visible="{ opacity: 1 }"
+        :delay="100"
+        :duration="300"
+        class="text-[30px] md:text-[40px] font-medium text-white"
+      >
         My Projects
       </h1>
-      <p class="text-center text-white/40">
+      <p
+        v-motion
+        :initial="{ opacity: 0 }"
+        :enter="{ opacity: 1 }"
+        :visible="{ opacity: 1 }"
+        :delay="200"
+        :duration="600"
+        class="text-center text-white/40"
+      >
         Compilation of projects that evoke my sense of pride
       </p>
     </div>
 
     <!-- card project -->
-    <div class="flex flex-col gap-y-10 items-center mt-16">
+    <div
+      v-motion
+      :initial="{ opacity: 0 }"
+      :enter="{ opacity: 1 }"
+      :visible="{ opacity: 1 }"
+      :duration="300"
+      :delay="200"
+      class="flex flex-col gap-y-10 items-center mt-16"
+    >
       <div
         class="bg-[#2B423F] p-5 w-[330px] h-[600px] md:w-[700px] xl:w-[900px] md:h-[360px] rounded-3xl sticky top-[80px]"
       >

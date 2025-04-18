@@ -3,10 +3,22 @@
     id="home"
     class="relative overflow-hidden h-svh w-full bg-linear-to-b from-new-blue-500/10 from-20% to-black px-7"
   >
-  <img src="../assets/image/lightSource.svg" alt="light source" class="absolute top-0 left-0 w-full mask-b-from-20% mask-b-to-80% opacity-30" />
+    <img
+      src="../assets/image/lightSource.svg"
+      alt="light source"
+      class="absolute top-0 left-0 w-full mask-b-from-20% mask-b-to-80% opacity-30"
+    />
     <div class="text-center flex justify-center">
       <div class="flex flex-col items-center pt-40 gap-7 h-full">
-        <div class="flex flex-col">
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: -30 }"
+          :enter="{ opacity: 1, y: 0 }"
+          :visible="{ opacity: 1, y: 0 }"
+          :delay="400"
+          :duration="300"
+          class="flex flex-col"
+        >
           <img
             src="../assets/image/emoji.png"
             alt="my emoji image"
@@ -23,17 +35,49 @@
           <div
             class="text-[30px] md:text-[40px] font-medium text-white leading-[1.2]"
           >
-            <h1>Welcome to</h1>
-            <h1>my personal portfolio</h1>
+            <h1
+              v-motion
+              :initial="{ opacity: 0 }"
+              :enter="{ opacity: 1 }"
+              :visible="{ opacity: 1 }"
+              :delay="300"
+              :duration="300"
+            >
+              Welcome to
+            </h1>
+            <h1
+              v-motion
+              :initial="{ opacity: 0 }"
+              :enter="{ opacity: 1 }"
+              :visible="{ opacity: 1 }"
+              :delay="400"
+              :duration="600"
+            >
+              my personal portfolio
+            </h1>
           </div>
           <p
+            v-motion
+            :initial="{ opacity: 0, y: 60 }"
+            :enter="{ opacity: 1, y: 0 }"
+            :visible="{ opacity: 1, y: 0 }"
+            :delay="400"
+            :duration="700"
             class="mt-4 text-white/40 font-light text-sm md:text-lg w-[250px] md:w-[500px] mx-auto"
           >
             Hi, I'm Thanakorn Wongklad. I'm incredibly passionate about web
             applications & UI/UX design
           </p>
         </div>
-        <div class="flex flex-col gap-3 md:flex-row md:gap-6 z-20">
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: 60 }"
+          :enter="{ opacity: 1, y: 0 }"
+          :visible="{ opacity: 1, y: 0 }"
+          :delay="400"
+          :duration="1000"
+          class="flex flex-col gap-3 md:flex-row md:gap-6 z-20"
+        >
           <button
             class="bg-white text-black p-2 w-[270px] md:w-[180px] rounded-xl hover:scale-105 transition"
           >
@@ -60,6 +104,12 @@
     ></div>
 
     <NuxtMarquee
+      v-motion
+      :initial="{ opacity: 0 }"
+      :enter="{ opacity: 1 }"
+      :visible="{ opacity: 1 }"
+      :delay="800"
+      :duration="900"
       class="overflow-hidden mt-32 md:mt-44"
       :direction="'left'"
       :gradient="true"

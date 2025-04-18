@@ -1,6 +1,12 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  modules: ["@nuxt/ui", "@nuxt/eslint", "@nuxtjs/google-fonts", "nuxt-marquee"],
+  modules: [
+    "@nuxt/ui",
+    "@nuxt/eslint",
+    "@nuxtjs/google-fonts",
+    "nuxt-marquee",
+    "@vueuse/motion/nuxt",
+  ],
   css: ["~/assets/css/main.css"],
   ssr: false,
   app: {

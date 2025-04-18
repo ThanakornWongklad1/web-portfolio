@@ -3,7 +3,15 @@
     <div id="about" class="w-full flex justify-center mb-40">
       <div class="pt-32 w-[330px] md:w-[700px] xl:w-[1050px]">
         <div class="flex flex-col md:flex-row justify-between gap-5">
-          <div class="flex md:hidden flex-col mb-5">
+          <div
+            v-motion
+            :initial="{ opacity: 0, x: -30 }"
+            :enter="{ opacity: 1, x: 0 }"
+            :visible="{ opacity: 1, x: 0 }"
+            :delay="300"
+            :duration="300"
+            class="flex md:hidden flex-col mb-5"
+          >
             <p class="text-sm md:text-[16px] text-gradient tracking-[0.3rem]">
               ABOUT ME
             </p>
@@ -13,7 +21,15 @@
             <p class="text-white">My journey in few words</p>
           </div>
           <div class="w-full flex flex-col items-start order-2 md:order-1">
-            <div class="hidden md:flex flex-col">
+            <div
+              v-motion
+              :initial="{ opacity: 0, x: -30 }"
+              :enter="{ opacity: 1, x: 0 }"
+              :visible="{ opacity: 1, x: 0 }"
+              :delay="300"
+              :duration="300"
+              class="hidden md:flex flex-col"
+            >
               <p class="text-sm md:text-[16px] text-gradient tracking-[0.3rem]">
                 ABOUT ME
               </p>
@@ -22,8 +38,16 @@
               </h1>
               <p class="text-white text-lg">My journey in few words</p>
             </div>
-            <article class="pt-5 indent-5 text-white/60 text-[16px] lg:text-lg">
-              Hi, I'm Thanakorn Wongklad. You can call me “Af”. I'm graduate
+            <article
+              v-motion
+              :initial="{ opacity: 0, x: -30 }"
+              :enter="{ opacity: 1, x: 0 }"
+              :visible="{ opacity: 1, x: 0 }"
+              :delay="400"
+              :duration="300"
+              class="pt-5 indent-5 text-white/60 text-[16px] lg:text-lg"
+            >
+              Hi, I'm Thanakorn Wongklad. You can call me “Af”. I'm graduated
               from KMUTT, Faculty of Information Technology. I'm incredibly
               passionate about web applications & UI/UX design - I became
               interested in Frontend when I learned about creating web
@@ -33,6 +57,12 @@
             </article>
           </div>
           <img
+            v-motion
+            :initial="{ opacity: 0, x: 30 }"
+            :enter="{ opacity: 1, x: 0 }"
+            :visible="{ opacity: 1, x: 0 }"
+            :delay="400"
+            :duration="300"
             src="../assets/image/PosterProfile.png"
             alt="My profile poster"
             class="w-full md:w-[300px] xl:w-[350px] object-contain order-1 md:order-2 hover:scale-110 hover:-rotate-[10deg] transition duration-400"
@@ -44,22 +74,52 @@
       <div class="flex justify-center">
         <div class="w-[330px] md:w-[700px] xl:w-[1050px]">
           <div class="flex flex-col gap-5">
-            <p class="text-sm md:text-[16px] text-gradient tracking-[0.3rem]">
+            <p
+              v-motion
+              :initial="{ opacity: 0, x: -30 }"
+              :enter="{ opacity: 1, x: 0 }"
+              :visible="{ opacity: 1, x: 0 }"
+              :delay="200"
+              :duration="300"
+              class="text-sm md:text-[16px] text-gradient tracking-[0.3rem]"
+            >
               MY SKILLS
             </p>
             <h1
+              v-motion
+              :initial="{ opacity: 0, x: -30 }"
+              :enter="{ opacity: 1, x: 0 }"
+              :visible="{ opacity: 1, x: 0 }"
+              :delay="100"
+              :duration="300"
               class="text-[30px] md:text-[40px] font-medium text-white leading-6"
             >
               Technology Stack
             </h1>
             <div class="w-full h-[1px] bg-white/30"></div>
             <div class="flex flex-col gap-5" v-for="(side, index) in mySkills">
-              <p class="text-white/70 text-lg font-light">{{ index }}</p>
+              <p
+                v-motion
+                :initial="{ opacity: 0, x: -30 }"
+                :enter="{ opacity: 1, x: 0 }"
+                :visible="{ opacity: 1, x: 0 }"
+                :delay="200"
+                :duration="300"
+                class="text-white/70 text-lg font-light"
+              >
+                {{ index }}
+              </p>
               <div class="flex flex-wrap gap-3">
                 <div
-                  v-for="skill in side"
+                  v-for="(skill, index) in side"
                   :key="skill.name"
                   class="bg-black/20 border border-white/20 w-[158px] md:w-[165px] xl:w-[200px] text-sm p-3 rounded-xl flex gap-2"
+                  v-motion
+                  :initial="{ opacity: 0, x: -30 }"
+                  :enter="{ opacity: 1, x: 0 }"
+                  :visible="{ opacity: 1, x: 0 }"
+                  :delay="100 + (index * 50)"
+                  :duration="300"
                 >
                   <div
                     :class="skill.bgCOlor"
@@ -79,6 +139,8 @@
   </div>
 </template>
 <script setup lang="ts">
+import { icons } from "@iconify-json/lucide/index.js";
+
 const mySkills = {
   Frontend: [
     {
@@ -134,6 +196,11 @@ const mySkills = {
       bgCOlor: "bg-[#ffffff]/20",
     },
     {
+      name: "Inertia.js",
+      icon: "devicon:inertiajs",
+      bgCOlor: "bg-[#4B5563]/20",
+    },
+    {
       name: "PostgreSQL",
       icon: "logos:postgresql",
       bgCOlor: "bg-[#336791]/20",
@@ -155,11 +222,6 @@ const mySkills = {
     },
   ],
   Tools_Others: [
-    {
-      name: "Git",
-      icon: "logos:git-icon",
-      bgCOlor: "bg-[#F05032]/20",
-    },
     {
       name: "GitHub",
       icon: "devicon:github",

@@ -16,6 +16,7 @@
     "@iconify-json/simple-icons": "^1.2.32",
     "@nuxt/ui": "^3.0.2",
     "@nuxtjs/google-fonts": "^3.2.0",
+    "@vueuse/motion": "^3.0.3",
     "nuxt": "^3.16.2",
     "nuxt-marquee": "^1.0.4"
   },

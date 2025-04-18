@@ -1,6 +1,6 @@
 <template>
   <!-- footer -->
-  <div class="w-full h-[0.5px] bg-white/20 hidden xl:flex mt-32"></div>
+  <div class="w-full h-[0.5px] bg-white/20 hidden xl:flex"></div>
   <footer
     id="footer"
     class="flex justify-center mt-20 xl:mt-0 pb-7 px-10 bg-black/30 xl:bg-black/0"
