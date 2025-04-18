@@ -1,7 +1,7 @@
 <template>
   <nav class="flex justify-center w-full">
     <div
-      class="w-[330px] z-50 hidden md:flex fixed top-4 bg-white/10 backdrop-blur-md rounded-full border border-white/10 py-2 justify-around"
+      class="w-[330px] z-50 hidden shadow-xl md:flex fixed top-4 bg-white/10 backdrop-blur-md rounded-full border border-white/10 py-2 justify-around"
     >
       <a href="/" class="hover:text-[#c6fca6]">Home</a>
       <a href="#projects" class="hover:text-[#c6fca6]">Projects</a>
@@ -10,7 +10,7 @@
     </div>
 
     <div
-      class="w-[330px] z-50 px-5 md:hidden fixed top-4 bg-white/10 backdrop-blur-md rounded-full border border-white/10 py-2 flex justify-between"
+      class="w-[330px] z-50 px-5 md:hidden shadow-xl fixed top-4 bg-white/10 backdrop-blur-md rounded-full border border-white/10 py-2 flex justify-between"
     >
       <a href="#home" class="hover:text-[#c6fca6]">Welcome</a>
       <UModal
