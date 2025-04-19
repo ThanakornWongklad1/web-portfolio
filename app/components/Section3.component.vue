@@ -207,8 +207,8 @@ const mySkills = {
       bgCOlor: "bg-[#ffffff]/20",
     },
     {
-      name: "Inertia.js",
-      icon: "devicon:inertiajs",
+      name: "Adonis.js",
+      icon: "devicon:adonisjs",
       bgCOlor: "bg-[#4B5563]/20",
     },
     {
@@ -257,6 +257,11 @@ const mySkills = {
       name: "Docker",
       icon: "logos:docker-icon",
       bgCOlor: "bg-[#2496ED]/20",
+    },
+    {
+      name: "Line LIFF",
+      icon: "mdi:chat",
+      bgCOlor: "bg-[#06c755]",
     },
   ],
 };

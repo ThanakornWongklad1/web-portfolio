@@ -64,11 +64,10 @@
     <!-- card project -->
     <div
       v-motion
-      :initial="{ opacity: 0 }"
-      :enter="{ opacity: 1 }"
-      :visible="{ opacity: 1 }"
-      :duration="300"
-      :delay="200"
+      :initial="{ y: 30, scale: 0.8, opacity: 0 }"
+      :enter="{ y: 0, scale: 1, opacity: 1 }"
+      :visible="{ y: 0, scale: 1, opacity: 1 }"
+      :duration="500"
       class="flex flex-col gap-y-10 items-center mt-16"
     >
       <div
@@ -85,22 +84,14 @@
               ></div>
               <p class="text-gradient">2023</p>
             </div>
-            <h2 class="text-4xl font-medium">SIT Announcement</h2>
+            <h2 class="text-3xl md:text-4xl font-medium">SIT Announcement</h2>
             <article class="font-light text-sm md:text-base">
-              I am interested in Full-stack developer. My interest lies in
-              frontend developer, and backend developer. I am interestedin
-              Full-stack developer. My interest lies in frontend developer, and
-              backend developer
+              SIT Announcement project is a system for announcing news of IT
+              students. It was developed in the third year of the
+              INT222-Integrated Project. The project is a web application that
+              allows administrators to post news and students to view the news.
+              The project was developed using Vue3, Java, and MySQL.
             </article>
-            <button
-              class="bg-white hover:scale-105 transition text-black p-2 w-[270px] md:w-[180px] rounded-xl flex justify-center gap-2"
-            >
-              Download CV
-              <UIcon
-                name="i-heroicons-arrow-up-right"
-                class="w-5 h-5 my-auto"
-              />
-            </button>
           </div>
           <div>
             <img
@@ -119,28 +110,31 @@
             class="w-full md:w-1/2 h-full flex flex-col justify-center gap-5"
           >
             <div class="flex gap-3 text-sm md:text-base font-bold">
-              <p class="text-gradient">Integrated Project</p>
+              <p class="text-gradient">Internship</p>
               <div
                 class="w-1.5 h-1.5 my-auto rounded-full gradient-background"
               ></div>
-              <p class="text-gradient">2023</p>
+              <p class="text-gradient">2024</p>
             </div>
-            <h2 class="text-4xl font-medium">SIT Announcement</h2>
+            <h2 class="text-3xl md:text-4xl font-medium">Safetify</h2>
+            <!-- vue3, nest.js , postgresql, lineliff -->
             <article class="font-light text-sm md:text-base">
-              I am interested in Full-stack developer. My interest lies in
-              frontend developer, and backend developer. I am interestedin
-              Full-stack developer. My interest lies in frontend developer, and
-              backend developer
+              Safetify is an E-stamp Online system designed to increase
+              convenience and safety in dealing with residents' visitors. Notify
+              visitors via Line Official in Real-time. The system is developed
+              using Vue3, Nest.js, PostgreSQL, and LINE Liff.
             </article>
-            <button
-              class="bg-white hover:scale-105 transition text-black p-2 w-[270px] md:w-[180px] rounded-xl flex justify-center gap-2"
+            <a
+              href="https://www.safetify.app/"
+              target="_blank"
+              class="bg-white hover:scale-105 transition text-black p-2 w-[270px] md:w-[200px] rounded-xl flex justify-center gap-2"
             >
-              Download CV
+              Visit website
               <UIcon
                 name="i-heroicons-arrow-up-right"
                 class="w-5 h-5 my-auto"
               />
-            </button>
+            </a>
           </div>
           <div>
             <img
@@ -159,28 +153,22 @@
             class="w-full md:w-1/2 h-full flex flex-col justify-center gap-5"
           >
             <div class="flex gap-3 text-sm md:text-base font-bold">
-              <p class="text-gradient">Integrated Project</p>
+              <p class="text-gradient">Internship</p>
               <div
                 class="w-1.5 h-1.5 my-auto rounded-full gradient-background"
               ></div>
-              <p class="text-gradient">2023</p>
+              <p class="text-gradient">2024</p>
             </div>
-            <h2 class="text-4xl font-medium">SIT Announcement</h2>
+            <h2 class="text-3xl md:text-4xl font-medium">
+              Line Messaging Service
+            </h2>
             <article class="font-light text-sm md:text-base">
-              I am interested in Full-stack developer. My interest lies in
-              frontend developer, and backend developer. I am interestedin
-              Full-stack developer. My interest lies in frontend developer, and
-              backend developer
+              I was assigned to develop a Line messaging service for my
+              internship company to be used for sending Line messages for the
+              company's products. The system is developed using Vue3, Nest.js,
+              PostgreSQL, and LINE Liff. The system is designed to be easy to
+              use.
             </article>
-            <button
-              class="bg-white hover:scale-105 transition text-black p-2 w-[270px] md:w-[180px] rounded-xl flex justify-center gap-2"
-            >
-              Download CV
-              <UIcon
-                name="i-heroicons-arrow-up-right"
-                class="w-5 h-5 my-auto"
-              />
-            </button>
           </div>
           <div>
             <img
@@ -199,28 +187,20 @@
             class="w-full md:w-1/2 h-full flex flex-col justify-center gap-5"
           >
             <div class="flex gap-3 text-sm md:text-base font-bold">
-              <p class="text-gradient">Integrated Project</p>
+              <p class="text-gradient">Capstone Project</p>
               <div
                 class="w-1.5 h-1.5 my-auto rounded-full gradient-background"
               ></div>
-              <p class="text-gradient">2023</p>
+              <p class="text-gradient">2024 - 2025</p>
             </div>
-            <h2 class="text-4xl font-medium">SIT Announcement</h2>
+            <h2 class="text-3xl md:text-4xl font-medium">Order Swift</h2>
+            <!-- nuxt3, nestjs, postgresql, lineliff, socket.io -->
             <article class="font-light text-sm md:text-base">
-              I am interested in Full-stack developer. My interest lies in
-              frontend developer, and backend developer. I am interestedin
-              Full-stack developer. My interest lies in frontend developer, and
-              backend developer
+              Order Swift is a web application for restaurants to manage their
+              orders and customers can order food from the restaurant. The
+              system is developed using Nuxt3, Nest.js, PostgreSQL, LINE Liff,
+              and Socket.io.
             </article>
-            <button
-              class="bg-white hover:scale-105 transition text-black p-2 w-[270px] md:w-[180px] rounded-xl flex justify-center gap-2"
-            >
-              Download CV
-              <UIcon
-                name="i-heroicons-arrow-up-right"
-                class="w-5 h-5 my-auto"
-              />
-            </button>
           </div>
           <div>
             <img

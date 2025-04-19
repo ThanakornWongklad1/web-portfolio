@@ -60,6 +60,10 @@ body {
   color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .pulse {
   animation: pulse-animation 1s infinite;
 }
