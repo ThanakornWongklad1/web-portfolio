@@ -20,6 +20,8 @@ export default defineNuxtConfig({
         },
         { name: "author", content: "Thanakorn Wongklad" },
       ],
+      link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
+      title: "Portfolio",
     },
   },
   googleFonts: {
