@@ -1,15 +1,10 @@
 <template>
   <div
     id="home"
-    class="relative overflow-hidden h-svh w-full bg-linear-to-b from-new-blue-500/10 from-20% to-black px-7"
+    class="relative overflow-hidden w-full flex flex-col justify-center gap-20 h-screen bg-linear-to-b from-new-blue-500/10 from-20% to-black px-7"
   >
-    <img
-      src="../assets/image/lightSource.svg"
-      alt="light source"
-      class="absolute top-0 left-0 w-full mask-b-from-20% mask-b-to-80% opacity-30"
-    />
     <div class="text-center flex justify-center">
-      <div class="flex flex-col items-center pt-40 gap-7 h-full">
+      <div class="flex flex-col items-center gap-7 h-full">
         <div
           v-motion
           :initial="{ opacity: 0, y: -30 }"
@@ -92,25 +87,9 @@
         </div>
       </div>
     </div>
-    <!-- circle -->
-    <div
-      class="-z-10 absolute top-32 md:top-28 left-1/2 -translate-x-1/2 w-[500px] h-[500px] md:w-[550px] md:h-[550px] rounded-full border border-[#C6FCA6]/4 bg-radial from-white/0 from-40% to-[#C6FCA6]/10"
-    ></div>
-    <div
-      class="-z-10 absolute top-20 md:top-10 left-1/2 -translate-x-1/2 w-[600px] h-[600px] md:w-[700px] md:h-[700px] rounded-full border border-[#C6FCA6]/4 bg-radial from-white/0 from-40% to-[#C6FCA6]/10"
-    ></div>
-    <div
-      class="-z-10 absolute top-10 md:-top-10 left-1/2 -translate-x-1/2 w-[700px] h-[700px] md:w-[850px] md:h-[850px] rounded-full border border-[#C6FCA6]/4 bg-radial from-white/0 from-40% to-[#C6FCA6]/10"
-    ></div>
 
     <NuxtMarquee
-      v-motion
-      :initial="{ opacity: 0 }"
-      :enter="{ opacity: 1 }"
-      :visible="{ opacity: 1 }"
-      :delay="800"
-      :duration="900"
-      class="overflow-hidden mt-32 md:mt-44"
+      class="overflow-hidden"
       :direction="'left'"
       :gradient="true"
       :gradientColor="'#000'"
@@ -123,6 +102,24 @@
         </div>
       </div>
     </NuxtMarquee>
+
+    <!-- circle -->
+    <div
+      class="-z-10 absolute top-32 md:top-28 left-1/2 -translate-x-1/2 w-[500px] h-[500px] md:w-[550px] md:h-[550px] rounded-full border border-[#C6FCA6]/4 bg-radial from-white/0 from-40% to-[#C6FCA6]/10"
+    ></div>
+    <div
+      class="-z-10 absolute top-20 md:top-10 left-1/2 -translate-x-1/2 w-[600px] h-[600px] md:w-[700px] md:h-[700px] rounded-full border border-[#C6FCA6]/4 bg-radial from-white/0 from-40% to-[#C6FCA6]/10"
+    ></div>
+    <div
+      class="-z-10 absolute top-10 md:-top-10 left-1/2 -translate-x-1/2 w-[700px] h-[700px] md:w-[850px] md:h-[850px] rounded-full border border-[#C6FCA6]/4 bg-radial from-white/0 from-40% to-[#C6FCA6]/10"
+    ></div>
+
+    <!-- light source -->
+    <img
+      src="../assets/image/lightSource.svg"
+      alt="light source"
+      class="absolute top-0 left-0 w-full mask-b-from-20% mask-b-to-80% opacity-30"
+    />
   </div>
 </template>
 <script setup lang="ts">

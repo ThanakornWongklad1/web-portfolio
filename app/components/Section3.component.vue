@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col">
-    <div id="about" class="w-full flex justify-center mb-40">
+  <div class="flex flex-col relative overflow-hidden">
+    <div id="about" class="w-full flex justify-center mb-20">
       <div class="pt-32 w-[330px] md:w-[700px] xl:w-[1050px]">
         <div class="flex flex-col md:flex-row justify-between gap-5">
           <div
@@ -65,12 +65,25 @@
             :duration="300"
             src="../assets/image/PosterProfile.png"
             alt="My profile poster"
-            class="w-full md:w-[300px] xl:w-[350px] object-contain order-1 md:order-2 hover:scale-110 hover:-rotate-[10deg] transition duration-400"
+            class="w-[300px] md:w-[300px] xl:w-[350px] object-contain order-1 md:order-2 hover:scale-110 hover:-rotate-[10deg] transition duration-400"
           />
         </div>
       </div>
     </div>
-    <div id="skills" class="relative w-full flex flex-col gap-8">
+    <NuxtMarquee
+      class="overflow-hidden mb-20 rotate-1 bg-linear-to-br from-[#C6FCA6] to-[#A7FCEE]/74"
+      :direction="'left'"
+      :gradient="true"
+      :gradientColor="'#c6fca6'"
+      :gradient-width="'100px'"
+      :auto-fill="true"
+    >
+      <div class="flex gap-3 justify-center py-2 text-black">
+        <UIcon name="i-heroicons-bolt-solid" class="w-5 h-5 my-auto" />
+        <p class="my-auto font-medium text-2xl mx-5">Thanakorn</p>
+      </div>
+    </NuxtMarquee>
+    <div id="skills" class="w-full flex flex-col gap-8">
       <div class="flex justify-center">
         <div class="w-[330px] md:w-[700px] xl:w-[1050px]">
           <div class="flex flex-col gap-5">
@@ -118,7 +131,7 @@
                   :initial="{ opacity: 0, x: -30 }"
                   :enter="{ opacity: 1, x: 0 }"
                   :visible="{ opacity: 1, x: 0 }"
-                  :delay="100 + (index * 50)"
+                  :delay="100 + index * 50"
                   :duration="300"
                 >
                   <div
@@ -139,8 +152,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import { icons } from "@iconify-json/lucide/index.js";
-
 const mySkills = {
   Frontend: [
     {
