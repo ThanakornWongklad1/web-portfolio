@@ -4,7 +4,7 @@
   width: 100%;
   background: rgb(193, 193, 193);
   background: radial-gradient(
-    circle at -50% 50%,
+    circle at -80% 50%,
     rgba(198, 252, 166, 0.4) 0%,
     rgba(167, 252, 238, 0.2) 26%,
     rgba(0, 0, 0, 0) 52%
@@ -71,144 +71,51 @@
       class="flex flex-col gap-y-10 items-center mt-16"
     >
       <div
-        class="noise bg-[#315539] p-5 w-[330px] h-[600px] md:w-[700px] xl:w-[900px] md:h-[360px] rounded-3xl sticky top-[80px]"
+        v-for="item in content"
+        :class="item.decorate_class"
+        class="noise w-[330px] h-[600px] md:w-[700px] md:h-[450px] xl:w-[1024px] rounded-3xl sticky"
       >
-        <div class="flex flex-col md:flex-row justify-between w-full h-full">
+        <div
+          class="pt-5 md:flex-row justify-start gap-5 w-full h-full relative"
+        >
           <div
-            class="w-full md:w-1/2 h-full flex flex-col justify-center gap-5"
+            class="w-full pl-5 pr-5 md:pl-5 md:pr-0 xl:pl-10 md:w-7/12 h-full flex flex-col md:justify-center gap-5"
           >
-            <div class="flex gap-3 text-sm md:text-base font-bold">
-              <p class="text-gradient">Integrated Project</p>
+            <div class="flex gap-3 text-sm md:text-base font-semibold">
+              <p class="text-gradient">{{ item.name }}</p>
               <div
                 class="w-1.5 h-1.5 my-auto rounded-full gradient-background"
               ></div>
-              <p class="text-gradient">2023</p>
+              <p class="text-gradient">{{ item.year }}</p>
             </div>
-            <h2 class="text-3xl md:text-4xl font-medium">SIT Announcement</h2>
-            <article class="font-light text-sm md:text-base">
-              SIT Announcement project is a system for announcing news of IT
-              students. It was developed in the third year of the
-              INT222-Integrated Project. The project is a web application that
-              allows administrators to post news and students to view the news.
-              The project was developed using Vue3, Java, and MySQL.
-            </article>
-          </div>
-          <div>
-            <img
-              src="/assets/image/emoji.png"
-              alt="section2"
-              class="w-full h-full object-cover rounded-3xl"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="noise bg-[#224336] p-5 w-[330px] h-[600px] md:w-[700px] xl:w-[900px] md:h-[360px] rounded-3xl sticky top-[120px]"
-      >
-        <div class="flex flex-col md:flex-row justify-between w-full h-full">
-          <div
-            class="w-full md:w-1/2 h-full flex flex-col justify-center gap-5"
-          >
-            <div class="flex gap-3 text-sm md:text-base font-bold">
-              <p class="text-gradient">Internship</p>
-              <div
-                class="w-1.5 h-1.5 my-auto rounded-full gradient-background"
-              ></div>
-              <p class="text-gradient">2024</p>
-            </div>
-            <h2 class="text-3xl md:text-4xl font-medium">Safetify</h2>
-            <!-- vue3, nest.js , postgresql, lineliff -->
-            <article class="font-light text-sm md:text-base">
-              Safetify is an E-stamp Online system designed to increase
-              convenience and safety in dealing with residents' visitors. Notify
-              visitors via Line Official in Real-time. The system is developed
-              using Vue3, Nest.js, PostgreSQL, and LINE Liff.
+            <h2 class="text-3xl md:text-[40px] font-medium">
+              {{ item.title }}
+            </h2>
+            <div class="w-full h-0.5 bg-white/10 rounded-full"></div>
+            <article
+              class="font-light text-sm md:text-base text-white/80 leading-6 md:leading-7 xl:leading-9"
+            >
+              {{ item.description }}
             </article>
             <a
-              href="https://www.safetify.app/"
+              v-if="item.button"
+              :href="item.button"
               target="_blank"
-              class="bg-white hover:scale-105 transition text-black p-2 w-[270px] md:w-[200px] rounded-xl flex justify-center gap-2"
+              class="bg-white hover:scale-105 transition text-black p-2 w-[270px] md:w-[200px] rounded-xl flex justify-center gap-2 group"
             >
               Visit website
               <UIcon
                 name="i-heroicons-arrow-up-right"
-                class="w-5 h-5 my-auto"
+                class="w-5 h-5 my-auto group-hover:rotate-45 group-hover:translate-x-1.5 transition"
               />
             </a>
           </div>
-          <div>
-            <img
-              src="/assets/image/emoji.png"
-              alt="section2"
-              class="w-full h-full object-cover rounded-3xl"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="noise bg-[#112e29] p-5 w-[330px] h-[600px] md:w-[700px] xl:w-[900px] md:h-[360px] rounded-3xl sticky top-[160px]"
-      >
-        <div class="flex flex-col md:flex-row justify-between w-full h-full">
-          <div
-            class="w-full md:w-1/2 h-full flex flex-col justify-center gap-5"
-          >
-            <div class="flex gap-3 text-sm md:text-base font-bold">
-              <p class="text-gradient">Internship</p>
-              <div
-                class="w-1.5 h-1.5 my-auto rounded-full gradient-background"
-              ></div>
-              <p class="text-gradient">2024</p>
-            </div>
-            <h2 class="text-3xl md:text-4xl font-medium">
-              Line Messaging Service
-            </h2>
-            <article class="font-light text-sm md:text-base">
-              I was assigned to develop a Line messaging service for my
-              internship company to be used for sending Line messages for the
-              company's products. The system is developed using Vue3, Nest.js,
-              PostgreSQL, and LINE Liff. The system is designed to be easy to
-              use.
-            </article>
-          </div>
-          <div>
-            <img
-              src="/assets/image/emoji.png"
-              alt="section2"
-              class="w-full h-full object-cover rounded-3xl"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="noise bg-[#153e3e] p-5 w-[330px] h-[600px] md:w-[700px] xl:w-[900px] md:h-[360px] rounded-3xl sticky top-[200px]"
-      >
-        <div class="flex flex-col md:flex-row justify-between w-full h-full">
-          <div
-            class="w-full md:w-1/2 h-full flex flex-col justify-center gap-5"
-          >
-            <div class="flex gap-3 text-sm md:text-base font-bold">
-              <p class="text-gradient">Capstone Project</p>
-              <div
-                class="w-1.5 h-1.5 my-auto rounded-full gradient-background"
-              ></div>
-              <p class="text-gradient">2024 - 2025</p>
-            </div>
-            <h2 class="text-3xl md:text-4xl font-medium">Order Swift</h2>
-            <!-- nuxt3, nestjs, postgresql, lineliff, socket.io -->
-            <article class="font-light text-sm md:text-base">
-              Order Swift is a web application for restaurants to manage their
-              orders and customers can order food from the restaurant. The
-              system is developed using Nuxt3, Nest.js, PostgreSQL, LINE Liff,
-              and Socket.io.
-            </article>
-          </div>
-          <div>
-            <img
-              src="/assets/image/emoji.png"
-              alt="section2"
-              class="w-full h-full object-cover rounded-3xl"
-            />
-          </div>
+          <img
+            :src="`${item.image}`"
+            alt="section2"
+            class="absolute object-cover rounded-3xl"
+            :class="item.image_style"
+          />
         </div>
       </div>
     </div>
@@ -227,3 +134,54 @@
     </div>
   </NuxtMarquee>
 </template>
+<script setup lang="ts">
+const content = [
+  {
+    name: "Integrated Project",
+    title: "SIT Announcement",
+    year: 2023,
+    description:
+      "SIT Announcement project is a web application for announcing news of IT students. The project is a web application that allows administrators to post news and students to view the news. The project was developed using Vue3, Java, and MySQL. Authentication is done using JWT",
+    decorate_class: "top-[80px] bg-[#315539]",
+    image: "/images/sas_mac.png",
+    image_style:
+      "w-[500px] md:w-[700px] xl:w-[800px] h-fit bottom-10 right-0 md:-bottom-8 md:-right-7/12 xl:-bottom-24 xl:-right-5/12",
+    button: undefined,
+  },
+  {
+    name: "Internship",
+    title: "Safetify",
+    year: 2024,
+    description:
+      "Safetify is an E-stamp Online System for village or condominium. Notify visitors via Line Official in Real-time. The system is developed using Vue3, Nest.js, PostgreSQL, and LINE Liff.",
+    decorate_class: "top-[120px] bg-[#224336]",
+    image: "/images/safetify.png",
+    image_style:
+      "w-[250px] md:w-[300px] xl:w-[350px] h-fit -bottom-12 right-10 md:-bottom-12 md:-right-10 xl:-bottom-12 xl:right-10",
+    button: "https://www.safetify.app/",
+  },
+  {
+    name: "Internship",
+    title: "Line Messaging Service",
+    year: "2024",
+    description:
+      "SIT Announcement project is a system for announcing news of IT students. It was developed in the third year of the INT222-Integrated Project. The project is a web application that allows administrators to post news and students to view the news. The project was developed using Vue3, Java, and MySQL.",
+    decorate_class: "top-[160px] bg-[#112e29]",
+    image: "/images/emoji.png",
+    image_style: "w-[300px] h-fit bottom-0 right-0",
+    button: undefined,
+  },
+  {
+    name: "Capstone Project",
+    title: "Order Swift",
+    year: "2024-2025",
+    description:
+      "SIT Announcement project is a system for announcing news of IT students. It was developed in the third year of the INT222-Integrated Project. The project is a web application that allows administrators to post news and students to view the news. The project was developed using Vue3, Java, and MySQL.",
+    decorate_class: "top-[160px] bg-[#153e3e]",
+    image: "/images/orderswift-cv.png",
+    image_style:
+      "w-[250px] md:w-[300px] xl:w-[350px] h-fit -bottom-12 right-10 md:-bottom-12 md:-right-10 xl:-bottom-12 xl:right-10",
+    button: undefined,
+  },
+];
+</script>

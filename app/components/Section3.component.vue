@@ -47,13 +47,13 @@
               :duration="300"
               class="pt-5 indent-5 text-white/60 text-[16px] lg:text-lg"
             >
-              Hi, I'm Thanakorn Wongklad. You can call me “Af”. I'm graduated
-              from KMUTT, Faculty of Information Technology. I'm incredibly
-              passionate about web applications & UI/UX design - I became
-              interested in Frontend when I learned about creating web
-              applications using HTML, CSS, javascript and vue3. I am eager to
-              gain exposure to new knowledge about Frontend and new technologies
-              in the future.
+              I am passionate about web developer. With expertise in Vue 3, Nuxt
+              3, NestJS, Typescript and Javascript. I am eager to apply academic
+              knowledge and personal project experience in a professional
+              setting. A fast learner with a strong problem-solving mindset and
+              a passion for continuous improvement. Ready to contribute as a
+              Full-stack, Frontend, or Backend Developer, and grow alongside a
+              supportive and innovative development team.
             </article>
           </div>
           <img

@@ -1,3 +1,26 @@
+<style>
+.animate-rotate {
+  animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+</style>
 <template>
   <div
     id="home"
@@ -40,16 +63,22 @@
             >
               Welcome to
             </h1>
-            <h1
+            <div
               v-motion
               :initial="{ opacity: 0 }"
               :enter="{ opacity: 1 }"
               :visible="{ opacity: 1 }"
               :delay="400"
               :duration="600"
+              class="flex"
             >
-              my personal portfolio
-            </h1>
+              <h1>my personal portfolio</h1>
+              <div
+                class="hidden md:flex animate-rotate text-white text-[20px] md:text-[30px] my-auto"
+              >
+                👋
+              </div>
+            </div>
           </div>
           <p
             v-motion
@@ -60,8 +89,11 @@
             :duration="700"
             class="mt-4 text-white/40 font-light text-sm md:text-lg w-[250px] md:w-[500px] mx-auto"
           >
-            Hi, I'm Thanakorn Wongklad. I'm incredibly passionate about web
-            applications & UI/UX design
+            Hi,
+            <span class="text-white underline w-fit"
+              >I'm Thanakorn Wongklad.</span
+            >
+            I'm incredibly passionate about web applications & UI/UX design
           </p>
         </div>
         <div
@@ -73,23 +105,28 @@
           :duration="1000"
           class="flex flex-col gap-3 md:flex-row md:gap-6 z-20"
         >
-          <button
+          <a
+            href="mailto:wongkladt@gmail.com"
             class="bg-white text-black p-2 w-[270px] md:w-[180px] rounded-xl hover:scale-105 transition"
           >
             Get in touch
-          </button>
+          </a>
           <button
-            class="bg-black/20 hover:scale-105 transition text-white border border-white/30 p-2 w-[270px] md:w-[180px] rounded-xl flex justify-center gap-2"
+            @click="downloadLocalFile"
+            class="bg-black/20 hover:scale-105 transition group text-white border border-white/30 p-2 w-[270px] md:w-[180px] rounded-xl flex justify-center gap-2 group"
           >
             Download CV
-            <UIcon name="i-heroicons-arrow-up-right" class="w-5 h-5 my-auto" />
+            <UIcon
+              name="i-heroicons-arrow-up-right"
+              class="w-5 h-5 my-auto group-hover:text-[#C6FCA6] group-hover:rotate-45 group-hover:translate-x-1.5 transition"
+            />
           </button>
         </div>
       </div>
     </div>
 
     <NuxtMarquee
-      class="overflow-hidden"
+      class="overflow-hidden opacity-30 pt-24"
       :direction="'left'"
       :gradient="true"
       :gradientColor="'#000'"
@@ -177,4 +214,11 @@ const skills = [
     icon: "akar-icons:postgresql-fill",
   },
 ];
+
+const downloadLocalFile = () => {
+  const link = document.createElement("a");
+  link.href = "/files/CV.pdf";
+  link.download = "cv_thanakorn_wongklad.pdf";
+  link.click();
+};
 </script>
