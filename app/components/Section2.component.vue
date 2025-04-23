@@ -76,10 +76,10 @@
         class="noise w-[330px] h-[600px] md:w-[700px] md:h-[450px] xl:w-[1024px] rounded-3xl sticky"
       >
         <div
-          class="pt-5 md:flex-row justify-start gap-5 w-full h-full relative"
+          class="pt-5 flex flex-col md:flex-row justify-start md:justify-between w-full h-full relative"
         >
           <div
-            class="w-full pl-5 pr-5 md:pl-5 md:pr-0 xl:pl-10 md:w-7/12 h-full flex flex-col md:justify-center gap-5"
+            class="w-full md:w-7/12 pl-5 pr-5 md:pl-5 md:pr-0 xl:pl-20 h-full flex flex-col md:justify-center gap-5"
           >
             <div class="flex gap-3 text-sm md:text-base font-semibold">
               <p class="text-gradient">{{ item.name }}</p>
@@ -110,12 +110,13 @@
               />
             </a>
           </div>
-          <img
-            :src="`${item.image}`"
-            alt="section2"
-            class="absolute object-cover rounded-3xl"
-            :class="item.image_style"
-          />
+          <div :class="item.image_style" class="absolute">
+            <img
+              :src="item.image"
+              :alt="item.title + ' image'"
+              class="mx-auto w-full object-cover rounded-3xl"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -145,7 +146,7 @@ const content = [
     decorate_class: "top-[80px] bg-[#315539]",
     image: "/images/sas_mac.png",
     image_style:
-      "w-[500px] md:w-[700px] xl:w-[800px] h-fit bottom-10 right-0 md:-bottom-8 md:-right-7/12 xl:-bottom-24 xl:-right-5/12",
+      "w-full md:w-[500px] xl:w-[600px] bottom-0 md:bottom-1/2 md:translate-y-1/2 md:-right-56 xl:-right-48",
     button: undefined,
   },
   {
@@ -157,7 +158,7 @@ const content = [
     decorate_class: "top-[120px] bg-[#224336]",
     image: "/images/safetify.png",
     image_style:
-      "w-[250px] md:w-[300px] xl:w-[350px] h-fit -bottom-12 right-10 md:-bottom-12 md:-right-10 xl:-bottom-12 xl:right-10",
+      "w-11/12 -bottom-24 right-3 md:w-[250px] md:bottom-1/2 md:translate-y-1/2 md:right-3 xl:w-[400px] xl:-bottom-16 xl:right-3 xl:translate-y-0",
     button: "https://www.safetify.app/",
   },
   {
@@ -168,7 +169,8 @@ const content = [
       "SIT Announcement project is a system for announcing news of IT students. It was developed in the third year of the INT222-Integrated Project. The project is a web application that allows administrators to post news and students to view the news. The project was developed using Vue3, Java, and MySQL.",
     decorate_class: "top-[160px] bg-[#112e29]",
     image: "/images/emoji.png",
-    image_style: "w-[300px] h-fit bottom-0 right-0",
+    image_style:
+      "w-[250px] bottom-0 right-10 md:w-[300px] md:right-0 md:bottom-0 xl:w-[400px] xl:right-0 xl:bottom-0",
     button: undefined,
   },
   {
@@ -180,7 +182,7 @@ const content = [
     decorate_class: "top-[160px] bg-[#153e3e]",
     image: "/images/orderswift-cv.png",
     image_style:
-      "w-[250px] md:w-[300px] xl:w-[350px] h-fit -bottom-12 right-10 md:-bottom-12 md:-right-10 xl:-bottom-12 xl:right-10",
+      "w-11/12 -bottom-24 right-3 md:w-[250px] md:bottom-1/2 md:translate-y-1/2 md:right-3 xl:w-[400px] xl:-bottom-16 xl:right-3 xl:translate-y-0",
     button: undefined,
   },
 ];

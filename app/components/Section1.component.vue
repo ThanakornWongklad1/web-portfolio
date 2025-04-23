@@ -217,7 +217,7 @@ const skills = [
 
 const downloadLocalFile = () => {
   const link = document.createElement("a");
-  link.href = "/files/CV.pdf";
+  link.href = "/files/cv_thanakorn_wongklad.pdf";
   link.download = "cv_thanakorn_wongklad.pdf";
   link.click();
 };
